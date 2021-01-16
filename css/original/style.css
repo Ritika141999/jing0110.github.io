@@ -64,70 +64,6 @@ ul, .h2, .h3, p {
   color: #5b8e7d;
 }
 
-@media (min-width: 1240px) {
-  .container, .component, .row {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-}
-
-@media (min-width: 1200px) and (max-width: 1239px) {
-  .container, .component, .row {
-    max-width: 1080px;
-    margin: 0 auto;
-  }
-}
-
-@media (min-width: 1080px) and (max-width: 1199px) {
-  .container, .component, .row {
-    max-width: 960px;
-    margin: 0 auto;
-  }
-}
-
-@media (min-width: 960px) and (max-width: 1079px) {
-  .container, .component, .row {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-}
-
-@media (min-width: 820px) and (max-width: 959px) {
-  .container, .component, .row {
-    max-width: 768px;
-    margin: 0 auto;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 819px) {
-  .container, .component, .row {
-    max-width: 720px;
-    margin: 0 auto;
-  }
-}
-
-@media (min-width: 720px) and (max-width: 767px) {
-  .container, .component, .row {
-    max-width: 640px;
-    margin: 0 auto;
-  }
-}
-
-@media (min-width: 641px) and (max-width: 719px) {
-  .container, .component, .row {
-    max-width: 560px;
-    margin: 0 auto;
-  }
-}
-
-@media (max-width: 640px) {
-  .container, .component, .row {
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 0 32px;
-  }
-}
-
 .wrapper {
   overflow-x: hidden;
 }
@@ -263,7 +199,7 @@ ul, .h2, .h3, p {
 
 .jumbotron {
   width: 100%;
-  height: 1000px;
+  height: 100vh;
   margin: 0;
   padding: 0;
   background-image: url("../../images/jumbotron.jpg");
@@ -299,28 +235,7 @@ ul, .h2, .h3, p {
   background-color: rgba(32, 22, 19, 0.5);
 }
 
-@media (min-width: 1280px) and (max-width: 1360px) {
-  .jumbotron {
-    height: 900px;
-  }
-}
-
-@media (min-width: 800px) and (max-width: 1279px) {
-  .jumbotron {
-    height: 832px;
-  }
-}
-
-@media (min-width: 641px) and (max-width: 799px) {
-  .jumbotron {
-    height: 600px;
-  }
-}
-
 @media (max-width: 640px) {
-  .jumbotron {
-    height: 100vh;
-  }
   .jumbotron .logo {
     width: 240px;
     height: 240px;
@@ -2048,6 +1963,70 @@ ul, .h2, .h3, p {
         -ms-flex-align: center;
             align-items: center;
     line-height: 1.2;
+  }
+}
+
+@media (min-width: 1240px) {
+  .container, .component, .row {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1239px) {
+  .container, .component, .row {
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1080px) and (max-width: 1199px) {
+  .container, .component, .row {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 960px) and (max-width: 1079px) {
+  .container, .component, .row {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 820px) and (max-width: 959px) {
+  .container, .component, .row {
+    max-width: 768px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 819px) {
+  .container, .component, .row {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 720px) and (max-width: 767px) {
+  .container, .component, .row {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 719px) {
+  .container, .component, .row {
+    max-width: 560px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .container, .component, .row {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 32px;
   }
 }
 /*# sourceMappingURL=style.css.map */
