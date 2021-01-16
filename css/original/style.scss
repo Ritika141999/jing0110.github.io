@@ -198,38 +198,6 @@ ul, .h2, .h3, p{
     }
 }
 
-@media (max-width: 992px){
-
-    .navbar{
-        padding: 0;
-        background-color: rgba($color: $black, $alpha: 0.5);
-
-        .navbar-toggler{
-            margin-left: 16px;
-        }
-
-        .navbar-collapse{
-            width: 100%;
-            height: 100vh;
-            padding-left: 16px;
-            background-color: rgba($color: $black, $alpha: 0.5);
-        }
-
-        .navbar-nav{
-            padding-left: 10px;
-        }
-
-        .form-inline{
-            margin-top: 10px;
-        }
-    }
-}
-
-.color{
-    background-color: rgba($color: $white, $alpha: 0.5);
-    border-bottom: 1px solid rgba($color: $black, $alpha: 0.5);
-}
-
 // header end
 // ------------------------------------------------------------
 
@@ -271,16 +239,6 @@ ul, .h2, .h3, p{
     top: 0;
     left: 0;
     background-color: rgba($color: $black, $alpha: 0.5);
-}
-
-@media (max-width: 640px){
-    .jumbotron{
-        
-        .logo{
-            width: 240px;
-            height: 240px;
-        }
-    }
 }
 
 // junbotron end
@@ -343,6 +301,721 @@ ul, .h2, .h3, p{
         }
     }
 }
+
+// salad end
+// ------------------------------------------------------------
+
+// ------------------------------------------------------------
+// salad-items start
+
+.salad-items{
+    margin: 0 auto 160px auto;
+    padding: 0 41px;
+
+    .row{
+        position: relative;
+    }
+
+    .image{
+        width: 300px;
+        height: auto;
+    }
+
+    .info{
+        padding:0 24px;
+        white-space: nowrap;
+
+        .h3{
+            margin-bottom: 16px;
+            font-weight: 350;
+            color: $brown;
+            line-height: 1.5;
+        }
+
+        .para{
+            @include para (16px);
+        }
+
+        .para:last-of-type{
+            margin-bottom: 16px;
+        }
+    }
+
+    .set{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .left-side{
+        width: 600px;
+        display: inline-block;
+        vertical-align: top;
+        font-size: 0;
+
+        .left-top-side{
+            padding-left: 160px;
+        }
+    }
+
+    .right-side{
+        width: calc(100% - 600px);
+        padding-top: 160px;
+        display: inline-block;
+        vertical-align: top;
+        font-size: 0;
+
+        .set{
+            flex-direction: row-reverse;
+        }
+    }
+
+    .illustration-2{
+        width: 300px;
+        height: 300px;
+        background-image: url('../../images/illustration/brunch2.png');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        opacity: .5;
+        position: absolute;
+        bottom: -336px;
+        left: -360px;
+        z-index: -1;
+    }
+
+    .illustration-3{
+        width: 192px;
+        height: 192px;
+        background-image: url('../../images/illustration/coffee-beans.png');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        opacity: .5;
+        position: absolute;
+        top: 16px;
+        right: -332px;
+        z-index: -1;
+    }
+
+    .illustration-4{
+        width: 272px;
+        height: 272px;
+        background-image: url('../../images/illustration/coffee-beans2.png');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        opacity: .5;
+        position: absolute;
+        bottom: -160px;
+        right: 240px;
+        z-index: -1;
+    }
+}
+
+// salad-items end
+// ------------------------------------------------------------
+
+.coffee{
+    width: 100%;
+    clip-path: polygon(70% 0, 100% 20%, 100% 100%, 0 100%, 0 30%);
+    background-image: url('../../images/coffee.jpg');
+    background-position: 100% 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    .info{
+        padding: 240px 0 160px 120px;
+        font-size: 0;
+
+        .h2{
+            @include h2 ($blue);
+        }
+
+        .para{
+            @include para (18px);
+            color: $white;
+            white-space: nowrap;
+        }
+
+        .btn{
+            @include btn-blue;
+        }
+
+        .btn:hover{
+            border: 1px solid $blue;
+            background-color: $white;
+            color: $blue;
+        }
+    }
+
+    .item{
+        width: calc(544px + 320px);
+        height: 100%;
+        padding-top: 160px;
+
+        .frame{
+            width: 272px;
+            height: 272px;
+            border-radius: 50%;
+            box-shadow: 0 0 8px rgba($color: #000000, $alpha: 0.5);
+            background-color: #000000;
+            overflow: hidden;
+
+            .image{
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                opacity: 0.75;
+                transition: all .2s;
+                overflow: hidden;
+
+
+                .h3{
+                    text-align: center;
+                    background-color: rgba($color: $black, $alpha: 0.5);
+                    font-size: 24px;
+                    font-weight: 350;
+                    color: $white;
+                    line-height: 272px;
+                }
+            }
+        }
+
+        .frame:hover .image{
+            transform: scale(1.1);
+            opacity: 1;
+        }
+
+        .frame:hover .h3{
+            background-color: rgba($color: $black, $alpha: 0);
+            color: rgba($color: $white, $alpha: 0);
+        }
+
+        .frame.first{
+            margin-left: 144px;
+        }
+
+        .frame.third{
+            position: relative;
+            bottom: 96px;
+        }
+    }
+}
+
+// coffee end
+// ------------------------------------------------------------
+
+// ------------------------------------------------------------
+// menu start
+
+.menu{
+    padding: 160px 80px;
+
+    .frame{
+        height: 720px;
+        position: relative;
+    }
+
+    .menu-cover{
+        width: 50%;
+        height: auto;
+        position: absolute;
+        bottom: 0;
+        left: 160px;
+    }
+
+    .menu-content{
+        width: 50%;
+        height: auto;
+        position: absolute;
+        top: 0;
+        right: 160px;
+    }
+}
+
+// menu end
+// ------------------------------------------------------------
+
+// ------------------------------------------------------------
+// space start
+
+.space:before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: $white, $alpha: 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.space{
+    width: 100%;
+    height: 880px;
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 75%);
+    background-image: url(../../images/space.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+
+    .info::before{
+        content: "";
+        display: inline-block;
+        width: 480px;
+        height: 360px;
+        border: 3px solid $yellow;
+        position: absolute;
+        top: 24px;
+        right: 24px;
+    }
+
+    .info{
+        text-align: left;
+        width: 480px;
+        height: 360px;
+        padding: 40px;
+        background-color: rgba($color: $black, $alpha: 0.8);
+        position: absolute;
+        top: 50%;
+        right: 120px;
+        transform: translateY(-50%);
+
+        .h2{
+            @include h2 ($blue);
+        }
+
+        .para{
+            @include para (18px);
+            color: $white;
+        }
+
+        .btn{
+            position: relative;
+        }
+    }
+}
+
+// space end
+// ------------------------------------------------------------
+
+// ------------------------------------------------------------
+// space items start
+
+.space-items{
+    margin: 0 auto;
+    padding: 160px 0;
+    font-size: 0;
+
+    .nav-tabs{
+        border-bottom: 1px solid $brown;
+        margin-bottom: 40px;
+
+        .nav-item{
+            margin-bottom: -2px;
+        }
+
+        .nav-link{
+            padding: 8px 24px;
+            font-size: 18px;
+            color: rgba($color: $brown, $alpha: 0.5);
+        }
+
+        .nav-link:hover{
+            border-color: rgba($color: $brown, $alpha: 0.3);
+        }
+
+        .nav-link.active{
+            color: $brown;
+            border-color: $brown $brown $white;
+        }
+    }
+
+    .tab-content{
+        .set{
+            margin-bottom: 24px;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+
+                .frame{
+                    width: 372px;
+                    height: 210px;
+                    position: relative;
+                    overflow: hidden;
+        
+                    .image{
+                        width: 100%;
+                        height: auto;
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+                }
+
+            .info{
+                padding: 26px 0 26px 24px;
+
+                .h4{
+                    margin-bottom: 16px;
+                    font-weight: 350;
+                    color: $brown;
+                }
+
+                .para{
+                    @include para(16px);
+                    text-align: justify;
+                    margin-bottom: 16px;
+                }
+            }
+        }
+    }
+}
+
+// space items end
+// ------------------------------------------------------------
+
+// ------------------------------------------------------------
+// contect start
+
+.contect{
+    width: 100%;
+    height: 832px;
+    font-size: 0;
+    background-image: url(../../images/contect.jpg);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+    position: relative;
+
+    .h2{
+        margin-bottom: 24px;
+        font-size: 24px;
+        font-weight: 350;
+        color: $blue;
+        line-height: 2;
+        text-align: center;
+    }
+
+    .message{
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        .set{
+            margin-bottom: 24px;
+
+            .label{
+                display: inline-block;
+                vertical-align: top;
+                margin: 0;
+                border-radius: 4px 0 0 4px;
+                padding: 0 8px;
+                font-size: 18px;
+                line-height: 2;
+                color: $black;
+                background-color: rgba($color: $white, $alpha: 0.7);
+                position: relative;
+            }
+
+            .line{
+                display: inline-block;
+                width: 1px;
+                height: 20px;
+                background-color: rgba($color: $black, $alpha: 0.5);
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+            }
+    
+            .form-control{
+                display: inline-block;
+                vertical-align: top;
+                width: 360px;
+                height: auto;
+                border: 0;
+                border-radius: 0 4px 4px 0;
+                padding: 0 8px;
+                font-size: 18px;
+                line-height: 2;
+                color: rgba($color: $black, $alpha: 0.8);
+                background-color: rgba($color: $white, $alpha: 0.7);
+            }
+    
+            .form-control:focus{
+                outline: none;
+                box-shadow: 0 0 0 rgba($color: $white, $alpha: 0);
+            }
+
+            .form-control.name{
+                width: 216px;
+                margin-right: 24px;
+            }
+
+            .gender-group{
+                width: calc(360px - 216px - 24px);
+
+                .form-check-inline{
+                    margin: 0;
+                }
+    
+                .form-check{
+                    font-size: 16px;
+                    color: $black;
+                    line-height: 36px;
+    
+                    .form-check-input{
+                        display: none;
+                    }
+
+                    .form-check-input + label span{
+                        display: inline-block;
+                        width: 16px;
+                        height: 16px;
+                        margin-top: 5p;
+                        margin-right: 4px;
+                        border-radius: 50%;
+                        background-color: rgba($color: $white, $alpha: 0.7);
+                    }
+
+                    .form-check-input:checked + label span{
+                        display: inline-block;
+                        width: 16px;
+                        height: 16px;
+                        border-radius: 50%;
+                        background-color: rgba($color: $white, $alpha: 0.7);
+                        background-image: url(../../images/check.svg);
+                        background-position: center;
+                    }
+                }
+            }
+        }
+
+        .textarea{
+            width: calc(360px + 52px);
+            height: 240px;
+            display: block;
+            margin-bottom: 24px;
+            border: 0;
+            border-radius: 4px;
+            padding: 8px;
+            background-color: rgba($color: $white, $alpha: 0.7);
+            font-size: 16px;
+            line-height: 1.5;
+            color: $black;
+        }
+
+        .textarea:focus{
+            outline: none;
+        }
+
+        .btn{
+            margin-left: calc(360px + 52px - 74px);
+        }
+    }
+}
+
+.contect:before{
+    content: "";
+    width: 100%;
+    height: 832px;
+    border: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba($color: $white, $alpha: 0.3);
+}
+
+// contect end
+// ------------------------------------------------------------
+
+// ------------------------------------------------------------
+// location start
+
+.map{
+    width: 100%;
+    height: 640px;
+
+    .iframe{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+// location end
+// ------------------------------------------------------------
+
+// ------------------------------------------------------------
+// footer start
+
+.footer{
+    width: 100%;
+    height: 160px;
+    padding-top: 48px;
+    background-color: $black;
+    text-align: center;
+    color: $white;
+
+    .info{
+        margin: 0 auto;
+        width: 720px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .para{
+            font-size: 18px;
+            font-weight: 300;
+            color: $yellow;
+            line-height: 2;
+        }
+
+        .copyright{
+            font-size: 16px;
+            font-weight: 350;
+            color: $white;
+            line-height: 2;
+        }
+    }
+}
+
+// footer end
+// ------------------------------------------------------------
+
+
+
+// ------------------------------------------------------------
+// RWD
+
+@media (min-width: 1240px){
+    .container, .component, .row{
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1239px){
+    .container, .component, .row{
+        max-width: 1080px;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 1080px) and (max-width: 1199px){
+    .container, .component, .row{
+        max-width: 960px;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 960px) and (max-width: 1079px){
+    .container, .component, .row{
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 820px) and (max-width: 959px){
+    .container, .component, .row{
+        max-width: 768px;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 819px){
+    .container, .component, .row{
+        max-width: 720px;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 720px) and (max-width: 767px){
+    .container, .component, .row{
+        max-width: 640px;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 719px){
+    .container, .component, .row{
+        max-width: 560px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 640px){
+    .container, .component, .row{
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0 32px;
+    }
+}
+// ------------------------------------------------------------
+// navbar start
+
+@media (max-width: 992px){
+
+    .navbar{
+        padding: 0;
+        background-color: rgba($color: $black, $alpha: 0.5);
+
+        .navbar-toggler{
+            margin-left: 16px;
+        }
+
+        .navbar-collapse{
+            width: 100%;
+            height: 100vh;
+            padding-left: 16px;
+            background-color: rgba($color: $black, $alpha: 0.5);
+        }
+
+        .navbar-nav{
+            padding-left: 10px;
+        }
+
+        .form-inline{
+            margin-top: 10px;
+        }
+    }
+}
+
+// navbar end
+// ------------------------------------------------------------
+
+// ------------------------------------------------------------
+// jumbotron start
+
+@media (max-width: 640px){
+    .jumbotron{
+        
+        .logo{
+            width: 240px;
+            height: 240px;
+        }
+    }
+}
+
+// jumbotron end
+// ------------------------------------------------------------
+
+// ------------------------------------------------------------
+// salad start
 
 @media (max-width: 1199px){
     .salad{
@@ -505,112 +1178,6 @@ ul, .h2, .h3, p{
 
 // ------------------------------------------------------------
 // salad-items start
-
-.salad-items{
-    margin: 0 auto 160px auto;
-    padding: 0 41px;
-
-    .row{
-        position: relative;
-    }
-
-    .image{
-        width: 300px;
-        height: auto;
-    }
-
-    .info{
-        padding:0 24px;
-        white-space: nowrap;
-
-        .h3{
-            margin-bottom: 16px;
-            font-weight: 350;
-            color: $brown;
-            line-height: 1.5;
-        }
-
-        .para{
-            @include para (16px);
-        }
-
-        .para:last-of-type{
-            margin-bottom: 16px;
-        }
-    }
-
-    .set{
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-    }
-
-    .left-side{
-        width: 600px;
-        display: inline-block;
-        vertical-align: top;
-        font-size: 0;
-
-        .left-top-side{
-            padding-left: 160px;
-        }
-    }
-
-    .right-side{
-        width: calc(100% - 600px);
-        padding-top: 160px;
-        display: inline-block;
-        vertical-align: top;
-        font-size: 0;
-
-        .set{
-            flex-direction: row-reverse;
-        }
-    }
-
-    .illustration-2{
-        width: 300px;
-        height: 300px;
-        background-image: url('../../images/illustration/brunch2.png');
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-        opacity: .5;
-        position: absolute;
-        bottom: -336px;
-        left: -360px;
-        z-index: -1;
-    }
-
-    .illustration-3{
-        width: 192px;
-        height: 192px;
-        background-image: url('../../images/illustration/coffee-beans.png');
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-        opacity: .5;
-        position: absolute;
-        top: 16px;
-        right: -332px;
-        z-index: -1;
-    }
-
-    .illustration-4{
-        width: 272px;
-        height: 272px;
-        background-image: url('../../images/illustration/coffee-beans2.png');
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-        opacity: .5;
-        position: absolute;
-        bottom: -160px;
-        right: 240px;
-        z-index: -1;
-    }
-}
 
 @media (min-width: 1480px) and (max-width: 1659px){
     .salad-items{
@@ -807,99 +1374,8 @@ ul, .h2, .h3, p{
 // salad-items end
 // ------------------------------------------------------------
 
-.coffee{
-    width: 100%;
-    clip-path: polygon(70% 0, 100% 20%, 100% 100%, 0 100%, 0 30%);
-    background-image: url('../../images/coffee.jpg');
-    background-position: 100% 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-
-    .info{
-        padding: 240px 0 160px 120px;
-        font-size: 0;
-
-        .h2{
-            @include h2 ($blue);
-        }
-
-        .para{
-            @include para (18px);
-            color: $white;
-            white-space: nowrap;
-        }
-
-        .btn{
-            @include btn-blue;
-        }
-
-        .btn:hover{
-            border: 1px solid $blue;
-            background-color: $white;
-            color: $blue;
-        }
-    }
-
-    .item{
-        width: calc(544px + 320px);
-        height: 100%;
-        padding-top: 160px;
-
-        .frame{
-            width: 272px;
-            height: 272px;
-            border-radius: 50%;
-            box-shadow: 0 0 8px rgba($color: #000000, $alpha: 0.5);
-            background-color: #000000;
-            overflow: hidden;
-
-            .image{
-                width: 100%;
-                height: 100%;
-                border-radius: 50%;
-                background-position: center;
-                background-size: cover;
-                background-repeat: no-repeat;
-                opacity: 0.75;
-                transition: all .2s;
-                overflow: hidden;
-
-
-                .h3{
-                    text-align: center;
-                    background-color: rgba($color: $black, $alpha: 0.5);
-                    font-size: 24px;
-                    font-weight: 350;
-                    color: $white;
-                    line-height: 272px;
-                }
-            }
-        }
-
-        .frame:hover .image{
-            transform: scale(1.1);
-            opacity: 1;
-        }
-
-        .frame:hover .h3{
-            background-color: rgba($color: $black, $alpha: 0);
-            color: rgba($color: $white, $alpha: 0);
-        }
-
-        .frame.first{
-            margin-left: 144px;
-        }
-
-        .frame.third{
-            position: relative;
-            bottom: 96px;
-        }
-    }
-}
+// ------------------------------------------------------------
+// coffee start
 
 @media (min-width: 1436px) and (max-width: 1540px){
     .coffee{
@@ -1262,31 +1738,6 @@ ul, .h2, .h3, p{
 // ------------------------------------------------------------
 // menu start
 
-.menu{
-    padding: 160px 80px;
-
-    .frame{
-        height: 720px;
-        position: relative;
-    }
-
-    .menu-cover{
-        width: 50%;
-        height: auto;
-        position: absolute;
-        bottom: 0;
-        left: 160px;
-    }
-
-    .menu-content{
-        width: 50%;
-        height: auto;
-        position: absolute;
-        top: 0;
-        right: 160px;
-    }
-}
-
 @media (min-width: 1440px) and (max-width: 1680px){
     .menu{
         .frame{
@@ -1445,64 +1896,6 @@ ul, .h2, .h3, p{
 // ------------------------------------------------------------
 // space start
 
-.space:before{
-    content: "";
-    width: 100%;
-    height: 100%;
-    background-color: rgba($color: $white, $alpha: 0.3);
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.space{
-    width: 100%;
-    height: 880px;
-    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 75%);
-    background-image: url(../../images/space.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    position: relative;
-
-    .info::before{
-        content: "";
-        display: inline-block;
-        width: 480px;
-        height: 360px;
-        border: 3px solid $yellow;
-        position: absolute;
-        top: 24px;
-        right: 24px;
-    }
-
-    .info{
-        text-align: left;
-        width: 480px;
-        height: 360px;
-        padding: 40px;
-        background-color: rgba($color: $black, $alpha: 0.8);
-        position: absolute;
-        top: 50%;
-        right: 120px;
-        transform: translateY(-50%);
-
-        .h2{
-            @include h2 ($blue);
-        }
-
-        .para{
-            @include para (18px);
-            color: $white;
-        }
-
-        .btn{
-            position: relative;
-        }
-    }
-}
-
 @media (min-width: 960px) and (max-width: 1200px){
     .space{
         clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 80%);
@@ -1584,77 +1977,6 @@ ul, .h2, .h3, p{
 
 // ------------------------------------------------------------
 // space items start
-
-.space-items{
-    margin: 0 auto;
-    padding: 160px 0;
-    font-size: 0;
-
-    .nav-tabs{
-        border-bottom: 1px solid $brown;
-        margin-bottom: 40px;
-
-        .nav-item{
-            margin-bottom: -2px;
-        }
-
-        .nav-link{
-            padding: 8px 24px;
-            font-size: 18px;
-            color: rgba($color: $brown, $alpha: 0.5);
-        }
-
-        .nav-link:hover{
-            border-color: rgba($color: $brown, $alpha: 0.3);
-        }
-
-        .nav-link.active{
-            color: $brown;
-            border-color: $brown $brown $white;
-        }
-    }
-
-    .tab-content{
-        .set{
-            margin-bottom: 24px;
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-start;
-            align-items: center;
-
-                .frame{
-                    width: 372px;
-                    height: 210px;
-                    position: relative;
-                    overflow: hidden;
-        
-                    .image{
-                        width: 100%;
-                        height: auto;
-                        position: absolute;
-                        top: 50%;
-                        transform: translateY(-50%);
-                    }
-                }
-
-            .info{
-                padding: 26px 0 26px 24px;
-
-                .h4{
-                    margin-bottom: 16px;
-                    font-weight: 350;
-                    color: $brown;
-                }
-
-                .para{
-                    @include para(16px);
-                    text-align: justify;
-                    margin-bottom: 16px;
-                }
-            }
-        }
-    }
-}
 
 @media (min-width: 1200px) and (max-width: 1240px){
     .space-items{
@@ -1836,159 +2158,7 @@ ul, .h2, .h3, p{
 // ------------------------------------------------------------
 
 // ------------------------------------------------------------
-// contect start
-
-.contect{
-    width: 100%;
-    height: 832px;
-    font-size: 0;
-    background-image: url(../../images/contect.jpg);
-    background-position: 50% 50%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
-    position: relative;
-
-    .h2{
-        margin-bottom: 24px;
-        font-size: 24px;
-        font-weight: 350;
-        color: $blue;
-        line-height: 2;
-        text-align: center;
-    }
-
-    .message{
-        position: absolute;
-        top: 55%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-
-        .set{
-            margin-bottom: 24px;
-
-            .label{
-                display: inline-block;
-                vertical-align: top;
-                margin: 0;
-                border-radius: 4px 0 0 4px;
-                padding: 0 8px;
-                font-size: 18px;
-                line-height: 2;
-                color: $black;
-                background-color: rgba($color: $white, $alpha: 0.7);
-                position: relative;
-            }
-
-            .line{
-                display: inline-block;
-                width: 1px;
-                height: 20px;
-                background-color: rgba($color: $black, $alpha: 0.5);
-                position: absolute;
-                top: 50%;
-                right: 0;
-                transform: translateY(-50%);
-            }
-    
-            .form-control{
-                display: inline-block;
-                vertical-align: top;
-                width: 360px;
-                height: auto;
-                border: 0;
-                border-radius: 0 4px 4px 0;
-                padding: 0 8px;
-                font-size: 18px;
-                line-height: 2;
-                color: rgba($color: $black, $alpha: 0.8);
-                background-color: rgba($color: $white, $alpha: 0.7);
-            }
-    
-            .form-control:focus{
-                outline: none;
-                box-shadow: 0 0 0 rgba($color: $white, $alpha: 0);
-            }
-
-            .form-control.name{
-                width: 216px;
-                margin-right: 24px;
-            }
-
-            .gender-group{
-                width: calc(360px - 216px - 24px);
-
-                .form-check-inline{
-                    margin: 0;
-                }
-    
-                .form-check{
-                    font-size: 16px;
-                    color: $black;
-                    line-height: 36px;
-    
-                    .form-check-input{
-                        display: none;
-                    }
-
-                    .form-check-input + label span{
-                        display: inline-block;
-                        width: 16px;
-                        height: 16px;
-                        margin-top: 5p;
-                        margin-right: 4px;
-                        border-radius: 50%;
-                        background-color: rgba($color: $white, $alpha: 0.7);
-                    }
-
-                    .form-check-input:checked + label span{
-                        display: inline-block;
-                        width: 16px;
-                        height: 16px;
-                        border-radius: 50%;
-                        background-color: rgba($color: $white, $alpha: 0.7);
-                        background-image: url(../../images/check.svg);
-                        background-position: center;
-                    }
-                }
-            }
-        }
-
-        .textarea{
-            width: calc(360px + 52px);
-            height: 240px;
-            display: block;
-            margin-bottom: 24px;
-            border: 0;
-            border-radius: 4px;
-            padding: 8px;
-            background-color: rgba($color: $white, $alpha: 0.7);
-            font-size: 16px;
-            line-height: 1.5;
-            color: $black;
-        }
-
-        .textarea:focus{
-            outline: none;
-        }
-
-        .btn{
-            margin-left: calc(360px + 52px - 74px);
-        }
-    }
-}
-
-.contect:before{
-    content: "";
-    width: 100%;
-    height: 832px;
-    border: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba($color: $white, $alpha: 0.3);
-}
+// content start
 
 @media (min-width: 640px) and (max-width: 800px){
     .contect{
@@ -2068,58 +2238,11 @@ ul, .h2, .h3, p{
     }
 }
 
-// contect end
-// ------------------------------------------------------------
-
-// ------------------------------------------------------------
-// location start
-
-.map{
-    width: 100%;
-    height: 640px;
-
-    .iframe{
-        width: 100%;
-        height: 100%;
-    }
-}
-
-// location end
+// content end
 // ------------------------------------------------------------
 
 // ------------------------------------------------------------
 // footer start
-
-.footer{
-    width: 100%;
-    height: 160px;
-    padding-top: 48px;
-    background-color: $black;
-    text-align: center;
-    color: $white;
-
-    .info{
-        margin: 0 auto;
-        width: 720px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-
-        .para{
-            font-size: 18px;
-            font-weight: 300;
-            color: $yellow;
-            line-height: 2;
-        }
-
-        .copyright{
-            font-size: 16px;
-            font-weight: 350;
-            color: $white;
-            line-height: 2;
-        }
-    }
-}
 
 @media (max-width: 767px){
     .footer{
@@ -2136,72 +2259,3 @@ ul, .h2, .h3, p{
 }
 
 // footer end
-// ------------------------------------------------------------
-
-
-
-// RWD
-
-@media (min-width: 1240px){
-    .container, .component, .row{
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-}
-
-@media (min-width: 1200px) and (max-width: 1239px){
-    .container, .component, .row{
-        max-width: 1080px;
-        margin: 0 auto;
-    }
-}
-
-@media (min-width: 1080px) and (max-width: 1199px){
-    .container, .component, .row{
-        max-width: 960px;
-        margin: 0 auto;
-    }
-}
-
-@media (min-width: 960px) and (max-width: 1079px){
-    .container, .component, .row{
-        max-width: 800px;
-        margin: 0 auto;
-    }
-}
-
-@media (min-width: 820px) and (max-width: 959px){
-    .container, .component, .row{
-        max-width: 768px;
-        margin: 0 auto;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 819px){
-    .container, .component, .row{
-        max-width: 720px;
-        margin: 0 auto;
-    }
-}
-
-@media (min-width: 720px) and (max-width: 767px){
-    .container, .component, .row{
-        max-width: 640px;
-        margin: 0 auto;
-    }
-}
-
-@media (min-width: 641px) and (max-width: 719px){
-    .container, .component, .row{
-        max-width: 560px;
-        margin: 0 auto;
-    }
-}
-
-@media (max-width: 640px){
-    .container, .component, .row{
-        max-width: 100%;
-        margin: 0 auto;
-        padding: 0 32px;
-    }
-}
