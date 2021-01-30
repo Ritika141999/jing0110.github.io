@@ -18,10 +18,15 @@
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
+    <!-- Vendor -->
+    <!-- lightbox CSS -->
+    <link rel="stylesheet" href="vendor/lightbox.min.css">
+
     <!-- Original CSS -->
     <link rel="stylesheet" href="css/original/style.css">
     <title>拾‧BRUNCH & SPACE</title>
   </head>
+
   <body>
     <div class="wrapper">
       <!-- top button -->
@@ -196,10 +201,14 @@
         <div class="link-area" id="menu"></div>
         <div class="frame">
           <div class="image-container cover">
-            <img src="images/menu1.jpg" class="menu-cover" width="297" height="210">
+            <a href="images/menu1.jpg" data-lightbox="roadtrip" data-title="菜單封面">
+              <img src="images/menu1.jpg" class="menu-cover" width="297" height="210">
+            </a>
           </div>
           <div class="image-container content">
-            <img src="images/menu2.jpg" class="menu-content" width="297" height="210">
+            <a href="images/menu2.jpg" data-lightbox="roadtrip" data-title="菜單內容">
+              <img src="images/menu2.jpg" class="menu-content" width="297" height="210">
+            </a>
           </div>
         </div>
       </div>
@@ -393,6 +402,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     
     <!-- vendor -->
+    <!-- rellax -->
     <script src="vendor/rellax.min.js"></script>
     <script>
       var rellax = new Rellax('.illustration', {
@@ -411,6 +421,16 @@
       //   speed: 6,
       //   center: true,
       // });
+
+
+      $('#btnToggle').on("click", function(){
+        $("#navbarFull").toggle();
+      });
+
     </script>
+
+    <!-- lightbox -->
+    <script src="vendor/lightbox.min.js"></script>
+
   </body>
 </html>

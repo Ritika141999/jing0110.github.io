@@ -311,6 +311,7 @@ ul, .h2, .h3, p {
 
 @media (max-width: 991px) {
   .header .navbar {
+    display: block;
     padding: 0;
   }
   .header .navbar .btn-toggle {
@@ -322,6 +323,7 @@ ul, .h2, .h3, p {
   .header .navbar .navbar-collapse {
     width: 100%;
     height: 100vh;
+    margin-top: -5px;
     padding: 16px;
     background-color: rgba(32, 22, 19, 0.8);
   }
@@ -348,11 +350,6 @@ ul, .h2, .h3, p {
     width: 80%;
     margin: 0 auto;
   }
-}
-
-.color {
-  background-color: rgba(255, 255, 255, 0.5);
-  border-bottom: 1px solid rgba(32, 22, 19, 0.5);
 }
 
 .jumbotron {
@@ -1620,7 +1617,6 @@ ul, .h2, .h3, p {
     padding: 96px 24px 112px 24px;
     -webkit-clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 85%);
             clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 85%);
-    position: static;
   }
   .space .info {
     margin: 0 auto;
@@ -1635,7 +1631,6 @@ ul, .h2, .h3, p {
     padding: 96px 24px 112px 24px;
     -webkit-clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 85%);
             clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 85%);
-    position: static;
   }
   .space .info:before {
     width: 336px;
@@ -1656,6 +1651,9 @@ ul, .h2, .h3, p {
   }
   .space .info .for-567px {
     display: none;
+  }
+  .space .info .para {
+    margin-bottom: 16px;
   }
 }
 
