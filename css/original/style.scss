@@ -1,10 +1,5 @@
 // ------------------------------------------------------------
 // definition
-
-html{
-    scroll-behavior: smooth;
-}
-
 $black: #201613;
 $blue: #90cfd8;
 $brown: #984704;
@@ -12,9 +7,26 @@ $green: #5b8e7d;
 $white: #ffffff;
 $yellow: #fcd368;
 
+html{
+    scroll-behavior: smooth;
+}
+
 *{
     box-sizing: border-box;
 }
+
+.container, .row, .col,
+.col-4, .col-5, .col-6, .col-7, .col-8,
+ul, .h2, .h3, p{
+    margin: 0;
+    padding: 0;
+}
+
+.container-1200{
+    max-width: 1200px;
+}
+
+
 
 @mixin btn-blue {
     border: 1px solid $blue;
@@ -92,839 +104,15 @@ $yellow: #fcd368;
     color: $color;
 }
 
-.wrapper{
-    overflow-x: hidden;
-}
-
-.container, .row, .col,
-.col-4, .col-5, .col-6, .col-7, .col-8,
-ul, .h2, .h3, p{
-    margin: 0;
-    padding: 0;
-}
-
-.row-full{
-    width: 100%;
-}
-
 .link-area{
     width: 100%;
     height: 64px;
     position: absolute;
     top: -64px;
-}
-
-// ------------------------------------------------------------
-
-
-
-// ------------------------------------------------------------
-// header start
-.header{
-    width: 100%;
-    height: 64px;
-    border-bottom: 1px solid $brown;
-    background-color: rgba($white, .8);
-    position: fixed;
-    z-index: 10;
-
-    .navbar{
-        width: 1200px;
-        height: 64px;
-        margin: 0 auto;
-        padding: 0;
-    
-        .navbar-toggler{
-            width: 64px;
-            height: 64px;
-            border: 0;
-            background-color: rgba($white, 0);
-            background-image: url(../../images/toggle.svg);
-            background-position: center;
-            background-size: contain;
-            background-repeat: no-repeat;
-        }
-    
-        .navbar-toggler:focus{
-            color: rgba($white, 0);
-            border-color: rgba($white, 0);
-            outline: none;
-        }
-    
-        .navbar-nav{
-            margin-right: auto;
-    
-            .nav-item{
-                margin: 0 24px 0 0;
-            }
-        
-            .nav-link{
-                padding: 0;
-                font-size: 18px;
-                line-height: 48px;
-                color: $brown;
-                position: relative;
-            }
-        
-            .nav-link:hover{
-                color: $brown;
-            }
-        
-            .nav-link:after{
-                content: "";
-                display: inline-block;
-                width: 0;
-                height: 3px;
-                background-color: $brown;
-                position: absolute;
-                bottom: 8px;
-                left: 0;
-                transition: all .3s;
-            }
-            
-            .nav-link:hover:after{
-                width: 36px;
-                position: absolute;
-                left: 0;
-            }
-        }
-
-        .form-inline.form-search{
-            .form-search-input{
-                height: 36px;
-                margin:0 16px 0 0;
-                border: 1px solid $brown;
-                padding: 8px;
-                color: $black;
-                border-radius: 4px;
-            }
-    
-            .form-search-input:focus{
-                outline: none;
-                border: 1px solid $brown;
-                box-shadow: 0 0 8px rgba($brown, 0.8);
-            }
-    
-            ::placeholder{
-                color: rgba($black, 0.5);
-            }
-
-            .btn-brown{
-                line-height: 36px;
-            }
-        }
-    }
-}
-
-
-
-// header end
-// ------------------------------------------------------------
-
-// ------------------------------------------------------------
-// junbotron start
-
-.jumbotron{
-    width: 100%;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-    background-image: url('../../images/jumbotron.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    position: relative;
-
-    .logo{
-        width: 320px;
-        height: 320px;
-        background-image: url('../../images/logo.svg');
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-        opacity: 0.8;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-}
-
-.jumbotron::before{
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba($black, 0.5);
-}
-
-// junbotron end
-// ------------------------------------------------------------
-
-// ------------------------------------------------------------
-// salad start
-
-.salad{
-    margin: 0 auto;
-    padding: 160px 0;
-    font-size: 0;
-    position: relative;
-
-    .info{
-        width: 50%;
-        margin-top: 64px;
-        padding: 24px;
-        display: inline-block;
-        vertical-align: top;
-        text-align: right;
-        position: relative;
-
-        .h2{
-            @include h2($blue);
-        }
-
-        .para{
-            @include para (18px);
-            margin-bottom: 48px;
-        }
-
-        .illustration{
-            width: 300px;
-            height: 300px;
-            background-image: url('../../images/illustration/brunch.png');
-            background-position: center;
-            background-size: contain;
-            background-repeat: no-repeat;
-            opacity: .5;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-        }
-    }
-
-    .frame{
-        display: inline-block;
-        vertical-align: top;
-        width: 50%;
-
-        .image{
-            width: 100%;
-            height: 640px;
-            border-radius: 0 160px;
-            background-image: url('../../images/brunch.jpg');
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-            position: relative;
-        }
-    }
-}
-
-// salad end
-// ------------------------------------------------------------
-
-// ------------------------------------------------------------
-// salad-items start
-
-.salad-items{
-    margin: 0 auto 160px auto;
-    padding: 0 41px;
-
-    .row{
-        position: relative;
-    }
-
-    .image{
-        width: 300px;
-        height: auto;
-    }
-
-    .info{
-        padding:0 24px;
-        white-space: nowrap;
-
-        .h3{
-            margin-bottom: 16px;
-            font-weight: 350;
-            color: $brown;
-            line-height: 1.5;
-        }
-
-        .para{
-            @include para (16px);
-        }
-
-        .para:last-of-type{
-            margin-bottom: 16px;
-        }
-    }
-
-    .set{
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-    }
-
-    .left-side{
-        width: 600px;
-        display: inline-block;
-        vertical-align: top;
-        font-size: 0;
-
-        .left-top-side{
-            padding-left: 160px;
-        }
-    }
-
-    .right-side{
-        width: calc(100% - 600px);
-        padding-top: 160px;
-        display: inline-block;
-        vertical-align: top;
-        font-size: 0;
-
-        .set{
-            flex-direction: row-reverse;
-        }
-    }
-
-    .illustration-2{
-        width: 300px;
-        height: 300px;
-        background-image: url('../../images/illustration/brunch2.png');
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-        opacity: .5;
-        position: absolute;
-        bottom: -336px;
-        left: -360px;
-        z-index: -1;
-    }
-
-    .illustration-3{
-        width: 192px;
-        height: 192px;
-        background-image: url('../../images/illustration/coffee-beans.png');
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-        opacity: .5;
-        position: absolute;
-        top: 16px;
-        right: -332px;
-        z-index: -1;
-    }
-
-    .illustration-4{
-        width: 272px;
-        height: 272px;
-        background-image: url('../../images/illustration/coffee-beans2.png');
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-        opacity: .5;
-        position: absolute;
-        bottom: -160px;
-        right: 240px;
-        z-index: -1;
-    }
-}
-
-// salad-items end
-// ------------------------------------------------------------
-
-.coffee{
-    width: 100%;
-    clip-path: polygon(70% 0, 100% 20%, 100% 100%, 0 100%, 0 30%);
-    background-image: url('../../images/coffee.jpg');
-    background-position: 100% 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    position: relative;
-
-    .info{
-        padding: 240px 0 160px 120px;
-        font-size: 0;
-
-        .h2{
-            @include h2 ($blue);
-        }
-
-        .para{
-            @include para (18px);
-            color: $white;
-            white-space: nowrap;
-        }
-
-        .btn{
-            @include btn-blue;
-        }
-
-        .btn:hover{
-            border: 1px solid $blue;
-            background-color: $white;
-            color: $blue;
-        }
-    }
-
-    .item{
-        width: calc(544px + 320px);
-        height: 100%;
-        padding-top: 160px;
-
-        .frame{
-            width: 272px;
-            height: 272px;
-            border-radius: 50%;
-            box-shadow: 0 0 8px rgba(#000000, 0.5);
-            background-color: #000000;
-            overflow: hidden;
-
-            .image{
-                width: 100%;
-                height: 100%;
-                border-radius: 50%;
-                background-position: center;
-                background-size: cover;
-                background-repeat: no-repeat;
-                opacity: 0.75;
-                transition: all .2s;
-                overflow: hidden;
-
-
-                .h3{
-                    text-align: center;
-                    background-color: rgba($black, 0.5);
-                    font-size: 24px;
-                    font-weight: 350;
-                    color: $white;
-                    line-height: 272px;
-                }
-            }
-        }
-
-        .frame:hover .image{
-            transform: scale(1.1);
-            opacity: 1;
-        }
-
-        .frame:hover .h3{
-            background-color: rgba($black, 0);
-            color: rgba($white, 0);
-        }
-
-        .frame.first{
-            margin-left: 144px;
-        }
-
-        .frame.third{
-            position: relative;
-            bottom: 96px;
-        }
-    }
-}
-
-// coffee end
-// ------------------------------------------------------------
-
-// ------------------------------------------------------------
-// menu start
-
-.menu{
-    padding: 160px 80px;
-    position: relative;
-
-    .frame{
-        height: 720px;
-        position: relative;
-    }
-
-    .menu-cover{
-        width: 50%;
-        height: auto;
-        position: absolute;
-        bottom: 0;
-        left: 160px;
-    }
-
-    .menu-content{
-        width: 50%;
-        height: auto;
-        position: absolute;
-        top: 0;
-        right: 160px;
-    }
-}
-
-// menu end
-// ------------------------------------------------------------
-
-// ------------------------------------------------------------
-// space start
-
-.space{
-    width: 100%;
-    height: 880px;
-    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 75%);
-    background-image: url(../../images/space.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    position: relative;
-
-    .info::before{
-        content: "";
-        display: inline-block;
-        width: 480px;
-        height: 360px;
-        border: 3px solid $yellow;
-        position: absolute;
-        top: 24px;
-        right: 24px;
-    }
-
-    .info{
-        text-align: left;
-        width: 480px;
-        height: 360px;
-        padding: 40px;
-        background-color: rgba($black, 0.8);
-        position: absolute;
-        top: 50%;
-        right: 120px;
-        transform: translateY(-50%);
-
-        .h2{
-            @include h2 ($blue);
-        }
-
-        .para{
-            @include para (18px);
-            color: $white;
-        }
-
-        .btn{
-            position: relative;
-        }
-    }
-}
-
-.space:before{
-    content: "";
-    width: 100%;
-    height: 100%;
-    background-color: rgba($white, 0.3);
-    position: absolute;
-    top: 0;
     left: 0;
 }
 
-// space end
-// ------------------------------------------------------------
-
-// ------------------------------------------------------------
-// space items start
-
-.space-items{
-    margin: 0 auto;
-    padding: 160px 0;
-    font-size: 0;
-
-    .nav-tabs{
-        border-bottom: 1px solid $brown;
-        margin-bottom: 40px;
-
-        .nav-item{
-            margin-bottom: -2px;
-        }
-
-        .nav-link{
-            padding: 8px 24px;
-            font-size: 18px;
-            color: rgba($brown, 0.5);
-        }
-
-        .nav-link:hover{
-            border-color: rgba($brown, 0.3);
-        }
-
-        .nav-link.active{
-            color: $brown;
-            border-color: $brown $brown $white;
-        }
-    }
-
-    .tab-content{
-        .set{
-            margin-bottom: 24px;
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-start;
-            align-items: center;
-
-                .frame{
-                    width: 372px;
-                    height: 210px;
-                    position: relative;
-                    overflow: hidden;
-        
-                    .image{
-                        width: 100%;
-                        height: auto;
-                        position: absolute;
-                        top: 50%;
-                        transform: translateY(-50%);
-                    }
-                }
-
-            .info{
-                padding: 26px 0 26px 24px;
-
-                .h4{
-                    margin-bottom: 16px;
-                    font-weight: 350;
-                    color: $brown;
-                }
-
-                .para{
-                    @include para(16px);
-                    text-align: justify;
-                    margin-bottom: 16px;
-                }
-            }
-        }
-    }
-}
-
-// space items end
-// ------------------------------------------------------------
-
-// ------------------------------------------------------------
-// contect start
-
-.contect{
-    width: 100%;
-    height: 832px;
-    font-size: 0;
-    background-image: url(../../images/contect.jpg);
-    background-position: 50% 50%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
-    position: relative;
-
-    .h2{
-        margin-bottom: 24px;
-        font-size: 24px;
-        font-weight: 350;
-        color: $blue;
-        line-height: 2;
-        text-align: center;
-    }
-
-    .message{
-        position: absolute;
-        top: 55%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-
-        .set{
-            margin-bottom: 24px;
-
-            .label{
-                display: inline-block;
-                vertical-align: top;
-                margin: 0;
-                border-radius: 4px 0 0 4px;
-                padding: 0 8px;
-                font-size: 18px;
-                line-height: 2;
-                color: $black;
-                background-color: rgba($white, 0.7);
-                position: relative;
-            }
-
-            .line{
-                display: inline-block;
-                width: 1px;
-                height: 20px;
-                background-color: rgba($black, 0.5);
-                position: absolute;
-                top: 50%;
-                right: 0;
-                transform: translateY(-50%);
-            }
-    
-            .form-control{
-                display: inline-block;
-                vertical-align: top;
-                width: 360px;
-                height: auto;
-                border: 0;
-                border-radius: 0 4px 4px 0;
-                padding: 0 8px;
-                font-size: 18px;
-                line-height: 2;
-                color: rgba($black, 0.8);
-                background-color: rgba($white, 0.7);
-            }
-    
-            .form-control:focus{
-                outline: none;
-                box-shadow: 0 0 0 rgba($white, 0);
-            }
-
-            .form-control.name{
-                width: 216px;
-                margin-right: 24px;
-            }
-
-            .gender-group{
-                width: calc(360px - 216px - 24px);
-
-                .form-check-inline{
-                    margin: 0;
-                }
-    
-                .form-check{
-                    font-size: 16px;
-                    color: $black;
-                    line-height: 36px;
-    
-                    .form-check-input{
-                        display: none;
-                    }
-
-                    .form-check-input + label span{
-                        display: inline-block;
-                        width: 16px;
-                        height: 16px;
-                        margin-top: 5p;
-                        margin-right: 4px;
-                        border-radius: 50%;
-                        background-color: rgba($white, 0.7);
-                    }
-
-                    .form-check-input:checked + label span{
-                        display: inline-block;
-                        width: 16px;
-                        height: 16px;
-                        border-radius: 50%;
-                        background-color: rgba($white, 0.7);
-                        background-image: url(../../images/check.svg);
-                        background-position: center;
-                    }
-                }
-            }
-        }
-
-        .textarea{
-            width: calc(360px + 52px);
-            height: 240px;
-            display: block;
-            margin-bottom: 24px;
-            border: 0;
-            border-radius: 4px;
-            padding: 8px;
-            background-color: rgba($white, 0.7);
-            font-size: 16px;
-            line-height: 1.5;
-            color: $black;
-        }
-
-        .textarea:focus{
-            outline: none;
-        }
-
-        .btn{
-            margin-left: calc(360px + 52px - 74px);
-        }
-    }
-}
-
-.contect:before{
-    content: "";
-    width: 100%;
-    height: 832px;
-    border: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba($white, 0.3);
-}
-
-// contect end
-// ------------------------------------------------------------
-
-// ------------------------------------------------------------
-// location start
-
-.map{
-    width: 100%;
-    height: 640px;
-    position: relative;
-
-    .iframe{
-        width: 100%;
-        height: 100%;
-    }
-}
-
-// location end
-// ------------------------------------------------------------
-
-// ------------------------------------------------------------
-// footer start
-
-.footer{
-    width: 100%;
-    height: 160px;
-    padding-top: 48px;
-    background-color: $black;
-    text-align: center;
-    color: $white;
-
-    .info{
-        margin: 0 auto;
-        width: 720px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-
-        .para{
-            font-size: 18px;
-            font-weight: 300;
-            color: $yellow;
-            line-height: 2;
-        }
-
-        .copyright{
-            font-size: 16px;
-            font-weight: 350;
-            color: $white;
-            line-height: 2;
-        }
-    }
-}
-
-// footer end
-// ------------------------------------------------------------
-
-
-
-// ------------------------------------------------------------
-// RWD
+// rwd
 
 @media (min-width: 1240px){
     .container, .component, .row{
@@ -989,44 +177,295 @@ ul, .h2, .h3, p{
         padding: 0 32px;
     }
 }
+
+.wrapper{
+    overflow-x: hidden;
+}
+
+.row-full{
+    width: 100%;
+}
+
 // ------------------------------------------------------------
-// navbar start
 
-@media (max-width: 992px){
 
-    .navbar{
-        padding: 0;
-        background-color: rgba($black, 0.5);
 
-        .navbar-toggler{
-            margin-left: 16px;
+// ------------------------------------------------------------
+// top start
+
+.back-top-link{
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    position: fixed;
+    bottom: 80px;
+    right: 0;
+    z-index: 1;
+
+    .back-top{
+        width: 100%;
+        height: 100%;
+        background-color: rgba($black, .8);
+        position: relative;
+
+        span:nth-child(1){
+            width: 4px;
+            height: 16px;
+            background-color: #fff;
+            position: absolute;
+            top: 8px;
+            left: 16px;
+            transform: rotate(45deg);
         }
 
-        .navbar-collapse{
-            width: 100%;
-            height: 100vh;
-            padding-left: 16px;
-            background-color: rgba($black, 0.5);
+        span:nth-child(2){
+            width: 4px;
+            height: 28px;
+            background-color: #fff;
+            position: absolute;
+            top: 9px;
+            left: 50%;
+            transform: translateX(-50%);
         }
 
-        .navbar-nav{
-            padding-left: 10px;
-        }
-
-        .form-inline{
-            margin-top: 10px;
+        span:nth-child(3){
+            width: 4px;
+            height: 16px;
+            background-color: #fff;
+            position: absolute;
+            top: 8px;
+            left: 28px;
+            transform: rotate(-45deg);
         }
     }
 }
 
-// navbar end
+// top end
 // ------------------------------------------------------------
 
 // ------------------------------------------------------------
-// jumbotron start
+// header start
+
+.header{
+    width: 100%;
+    height: 64px;
+    position: fixed;
+    z-index: 10;
+    background-color: rgba($black, .8);
+
+    .navbar{
+        max-width: 1200px;
+        height: 64px;
+        margin: 0 auto;
+        padding: 8px 0;
+
+    
+        .btn-toggle{
+            width: 64px;
+            height: 64px;
+            border: 0;
+            background-color: rgba($white, 0);
+            background-image: url(../../images/toggle.svg);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            display: none;
+        }
+    
+        .navbar-toggler:focus{
+            color: rgba($white, 0);
+            border-color: rgba($white, 0);
+            outline: none;
+        }
+    
+        .navbar-nav{
+            margin-right: auto;
+    
+            .nav-item{
+                margin: 0 24px 0 0;
+            }
+        
+            .nav-link{
+                padding: 0;
+                font-size: 18px;
+                line-height: 48px;
+                color: $blue;
+                position: relative;
+            }
+        
+            .nav-link:hover{
+                color: $blue;
+            }
+        
+            .nav-link::after{
+                content: "";
+                display: inline-block;
+                width: 0;
+                height: 3px;
+                background-color: $blue;
+                position: absolute;
+                bottom: 8px;
+                left: 0;
+                transition: all .3s;
+            }
+            
+            .nav-link:hover:after{
+                width: 36px;
+                position: absolute;
+                left: 0;
+            }
+        }
+
+        .input-search{
+            margin-right: 16px;
+            border: 1px solid $blue;
+            color: $black;
+        }
+
+        .input-search:focus{
+            outline: none;
+            border: 1px solid $blue;
+            box-shadow: 0 0 8px rgba($blue, 0.8);
+        }
+
+        ::placeholder{
+            color: rgba($black, 0.5);
+        }
+    }
+}
+
+
+
+@media (max-width: 1200px){
+    .header .navbar{
+        padding: 8px 24px;
+    }
+}
+
+@media (max-width: 991px){
+    .header{
+        .navbar{
+            padding: 0;
+
+            .btn-toggle{
+                display: inline-block;
+            }
+
+            .btn-toggle:focus{
+                outline: none;
+            }
+
+            .navbar-collapse{
+                width: 100%;
+                height: 100vh;
+                padding: 16px;
+                background-color: rgba($black, 0.8);
+            }
+
+            .navbar-nav{
+                padding: 0 24px;
+
+                .nav-item{
+                    text-align: center;
+                }
+
+                .nav-item:last-of-type{
+                    margin-bottom: 16px;
+                }
+
+                .nav-link{
+                    line-height: 64px;
+                }
+
+                .nav-link::after{
+                    content: none;
+                }
+            }
+
+            .form-inline{
+                .form-control{
+                    width: 80%;
+                    margin: 0 auto 16px auto;
+                }
+
+                .btn{
+                    width: 80%;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}
+
+.color{
+    background-color: rgba($white, 0.5);
+    border-bottom: 1px solid rgba($black, 0.5);
+}
+
+// header end
+// ------------------------------------------------------------
+
+// ------------------------------------------------------------
+// junbotron start
+
+.jumbotron{
+    width: 100%;
+    height: 1000px;
+    margin: 0;
+    padding: 0;
+    background-image: url('../../images/jumbotron.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+
+    .logo{
+        width: 320px;
+        height: 320px;
+        background-image: url('../../images/logo.svg');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        opacity: 0.8;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.jumbotron::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba($black, 0.5);
+}
+
+@media (min-width: 1280px) and (max-width: 1360px){
+    .jumbotron{
+        height: 900px;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 1279px){
+    .jumbotron{
+        height: 832px;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 799px){
+    .jumbotron{
+        height: 600px;
+    }
+}
 
 @media (max-width: 640px){
     .jumbotron{
+        height: 100vh;
         
         .logo{
             width: 240px;
@@ -1035,11 +474,67 @@ ul, .h2, .h3, p{
     }
 }
 
-// jumbotron end
+// junbotron end
 // ------------------------------------------------------------
 
 // ------------------------------------------------------------
 // salad start
+
+.salad{
+    margin: 0 auto;
+    padding: 160px 0;
+    font-size: 0;
+    position: relative;
+
+    .info{
+        width: 50%;
+        margin-top: 64px;
+        padding: 24px;
+        display: inline-block;
+        vertical-align: top;
+        text-align: right;
+        position: relative;
+
+        .h2{
+            @include h2($blue);
+        }
+
+        .para{
+            @include para (18px);
+            margin-bottom: 48px;
+        }
+
+        .illustration{
+            width: 300px;
+            height: 300px;
+            background-image: url('../../images/illustration/brunch.png');
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            opacity: .3;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    }
+
+    .frame{
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+
+        .image{
+            width: 100%;
+            height: 640px;
+            border-radius: 0 160px;
+            background-image: url('../../images/brunch.jpg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+    }
+}
 
 @media (max-width: 1199px){
     .salad{
@@ -1202,6 +697,112 @@ ul, .h2, .h3, p{
 
 // ------------------------------------------------------------
 // salad-items start
+
+.salad-items{
+    margin: 0 auto 160px auto;
+    padding: 0 41px;
+
+    .row{
+        position: relative;
+    }
+
+    .image{
+        width: 300px;
+        height: auto;
+    }
+
+    .info{
+        padding:0 24px;
+        white-space: nowrap;
+
+        .h3{
+            margin-bottom: 16px;
+            font-weight: 350;
+            color: $brown;
+            line-height: 1.5;
+        }
+
+        .para{
+            @include para (16px);
+        }
+
+        .para:last-of-type{
+            margin-bottom: 16px;
+        }
+    }
+
+    .set{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .left-side{
+        width: 600px;
+        display: inline-block;
+        vertical-align: top;
+        font-size: 0;
+
+        .left-top-side{
+            padding-left: 160px;
+        }
+    }
+
+    .right-side{
+        width: calc(100% - 600px);
+        padding-top: 160px;
+        display: inline-block;
+        vertical-align: top;
+        font-size: 0;
+
+        .set{
+            flex-direction: row-reverse;
+        }
+    }
+
+    .illustration-2{
+        width: 300px;
+        height: 300px;
+        background-image: url('../../images/illustration/brunch2.png');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        opacity: .3;
+        position: absolute;
+        bottom: -336px;
+        left: -360px;
+        z-index: -1;
+    }
+
+    .illustration-3{
+        width: 192px;
+        height: 192px;
+        background-image: url('../../images/illustration/coffee-beans.png');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        opacity: .3;
+        position: absolute;
+        top: 16px;
+        right: -332px;
+        z-index: -1;
+    }
+
+    .illustration-4{
+        width: 272px;
+        height: 272px;
+        background-image: url('../../images/illustration/coffee-beans2.png');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        opacity: .3;
+        position: absolute;
+        bottom: -160px;
+        right: 240px;
+        z-index: -1;
+    }
+}
 
 @media (min-width: 1480px) and (max-width: 1659px){
     .salad-items{
@@ -1398,8 +999,100 @@ ul, .h2, .h3, p{
 // salad-items end
 // ------------------------------------------------------------
 
-// ------------------------------------------------------------
-// coffee start
+.coffee{
+    width: 100%;
+    clip-path: polygon(70% 0, 100% 20%, 100% 100%, 0 100%, 0 30%);
+    background-image: url('../../images/coffee.jpg');
+    background-position: 100% 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: relative;
+
+    .info{
+        padding: 240px 0 160px 120px;
+        font-size: 0;
+
+        .h2{
+            @include h2 ($blue);
+        }
+
+        .para{
+            @include para (18px);
+            color: $white;
+            white-space: nowrap;
+        }
+
+        .btn{
+            @include btn-blue;
+        }
+
+        .btn:hover{
+            border: 1px solid $blue;
+            background-color: $white;
+            color: $blue;
+        }
+    }
+
+    .item{
+        width: calc(544px + 320px);
+        height: 100%;
+        padding-top: 160px;
+
+        .frame{
+            width: 272px;
+            height: 272px;
+            border-radius: 50%;
+            box-shadow: 0 0 8px rgba(#000000, 0.5);
+            background-color: #000000;
+            overflow: hidden;
+
+            .image{
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                opacity: 0.75;
+                transition: all .2s;
+                overflow: hidden;
+
+
+                .h3{
+                    text-align: center;
+                    background-color: rgba($black, 0.5);
+                    font-size: 24px;
+                    font-weight: 350;
+                    color: $white;
+                    line-height: 272px;
+                }
+            }
+        }
+
+        .frame:hover .image{
+            transform: scale(1.1);
+            opacity: 1;
+        }
+
+        .frame:hover .h3{
+            background-color: rgba($black, 0);
+            color: rgba($white, 0);
+        }
+
+        .frame.first{
+            margin-left: 144px;
+        }
+
+        .frame.third{
+            position: relative;
+            bottom: 96px;
+        }
+    }
+}
 
 @media (min-width: 1436px) and (max-width: 1540px){
     .coffee{
@@ -1762,6 +1455,32 @@ ul, .h2, .h3, p{
 // ------------------------------------------------------------
 // menu start
 
+.menu{
+    padding: 160px 80px;
+    position: relative;
+
+    .frame{
+        height: 720px;
+        position: relative;
+    }
+
+    .menu-cover{
+        width: 50%;
+        height: auto;
+        position: absolute;
+        bottom: 0;
+        left: 160px;
+    }
+
+    .menu-content{
+        width: 50%;
+        height: auto;
+        position: absolute;
+        top: 0;
+        right: 160px;
+    }
+}
+
 @media (min-width: 1440px) and (max-width: 1680px){
     .menu{
         .frame{
@@ -1920,6 +1639,64 @@ ul, .h2, .h3, p{
 // ------------------------------------------------------------
 // space start
 
+.space:before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba($white, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.space{
+    width: 100%;
+    height: 880px;
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 75%);
+    background-image: url(../../images/space.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+
+    .info::before{
+        content: "";
+        display: inline-block;
+        width: 480px;
+        height: 360px;
+        border: 3px solid $yellow;
+        position: absolute;
+        top: 24px;
+        right: 24px;
+    }
+
+    .info{
+        text-align: left;
+        width: 480px;
+        height: 360px;
+        padding: 40px;
+        background-color: rgba($black, 0.8);
+        position: absolute;
+        top: 50%;
+        right: 120px;
+        transform: translateY(-50%);
+
+        .h2{
+            @include h2 ($blue);
+        }
+
+        .para{
+            @include para (18px);
+            color: $white;
+        }
+
+        .btn{
+            position: relative;
+        }
+    }
+}
+
 @media (min-width: 960px) and (max-width: 1200px){
     .space{
         clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 80%);
@@ -2001,6 +1778,78 @@ ul, .h2, .h3, p{
 
 // ------------------------------------------------------------
 // space items start
+
+.space-items{
+    margin: 0 auto;
+    padding: 160px 0;
+    font-size: 0;
+    position: relative;
+
+    .nav-tabs{
+        border-bottom: 1px solid $brown;
+        margin-bottom: 40px;
+
+        .nav-item{
+            margin-bottom: -2px;
+        }
+
+        .nav-link{
+            padding: 8px 24px;
+            font-size: 18px;
+            color: rgba($brown, 0.5);
+        }
+
+        .nav-link:hover{
+            border-color: rgba($brown, 0.3);
+        }
+
+        .nav-link.active{
+            color: $brown;
+            border-color: $brown $brown $white;
+        }
+    }
+
+    .tab-content{
+        .set{
+            margin-bottom: 24px;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+
+                .frame{
+                    width: 372px;
+                    height: 210px;
+                    position: relative;
+                    overflow: hidden;
+        
+                    .image{
+                        width: 100%;
+                        height: auto;
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+                }
+
+            .info{
+                padding: 26px 0 26px 24px;
+
+                .h4{
+                    margin-bottom: 16px;
+                    font-weight: 350;
+                    color: $brown;
+                }
+
+                .para{
+                    @include para(16px);
+                    text-align: justify;
+                    margin-bottom: 16px;
+                }
+            }
+        }
+    }
+}
 
 @media (min-width: 1200px) and (max-width: 1240px){
     .space-items{
@@ -2182,7 +2031,159 @@ ul, .h2, .h3, p{
 // ------------------------------------------------------------
 
 // ------------------------------------------------------------
-// content start
+// contect start
+
+.contect{
+    width: 100%;
+    height: 832px;
+    font-size: 0;
+    background-image: url(../../images/contect.jpg);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+    position: relative;
+
+    .h2{
+        margin-bottom: 24px;
+        font-size: 24px;
+        font-weight: 350;
+        color: $blue;
+        line-height: 2;
+        text-align: center;
+    }
+
+    .message{
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        .set{
+            margin-bottom: 24px;
+
+            .label{
+                display: inline-block;
+                vertical-align: top;
+                margin: 0;
+                border-radius: 4px 0 0 4px;
+                padding: 0 8px;
+                font-size: 18px;
+                line-height: 2;
+                color: $black;
+                background-color: rgba($white, 0.7);
+                position: relative;
+            }
+
+            .line{
+                display: inline-block;
+                width: 1px;
+                height: 20px;
+                background-color: rgba($black, 0.5);
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+            }
+    
+            .form-control{
+                display: inline-block;
+                vertical-align: top;
+                width: 360px;
+                height: auto;
+                border: 0;
+                border-radius: 0 4px 4px 0;
+                padding: 0 8px;
+                font-size: 18px;
+                line-height: 2;
+                color: rgba($black, 0.8);
+                background-color: rgba($white, 0.7);
+            }
+    
+            .form-control:focus{
+                outline: none;
+                box-shadow: 0 0 0 rgba($white, 0);
+            }
+
+            .form-control.name{
+                width: 216px;
+                margin-right: 24px;
+            }
+
+            .gender-group{
+                width: calc(360px - 216px - 24px);
+
+                .form-check-inline{
+                    margin: 0;
+                }
+    
+                .form-check{
+                    font-size: 16px;
+                    color: $black;
+                    line-height: 36px;
+    
+                    .form-check-input{
+                        display: none;
+                    }
+
+                    .form-check-input + label span{
+                        display: inline-block;
+                        width: 16px;
+                        height: 16px;
+                        margin-top: 5p;
+                        margin-right: 4px;
+                        border-radius: 50%;
+                        background-color: rgba($white, 0.7);
+                    }
+
+                    .form-check-input:checked + label span{
+                        display: inline-block;
+                        width: 16px;
+                        height: 16px;
+                        border-radius: 50%;
+                        background-color: rgba($white, 0.7);
+                        background-image: url(../../images/check.svg);
+                        background-position: center;
+                    }
+                }
+            }
+        }
+
+        .textarea{
+            width: calc(360px + 52px);
+            height: 240px;
+            display: block;
+            margin-bottom: 24px;
+            border: 0;
+            border-radius: 4px;
+            padding: 8px;
+            background-color: rgba($white, 0.7);
+            font-size: 16px;
+            line-height: 1.5;
+            color: $black;
+        }
+
+        .textarea:focus{
+            outline: none;
+        }
+
+        .btn{
+            margin-left: calc(360px + 52px - 74px);
+        }
+    }
+}
+
+.contect:before{
+    content: "";
+    width: 100%;
+    height: 832px;
+    border: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba($white, 0.3);
+}
 
 @media (min-width: 640px) and (max-width: 800px){
     .contect{
@@ -2262,11 +2263,59 @@ ul, .h2, .h3, p{
     }
 }
 
-// content end
+// contect end
+// ------------------------------------------------------------
+
+// ------------------------------------------------------------
+// location start
+
+.map{
+    width: 100%;
+    height: 640px;
+    position: relative;
+
+    .iframe{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+// location end
 // ------------------------------------------------------------
 
 // ------------------------------------------------------------
 // footer start
+
+.footer{
+    width: 100%;
+    height: 160px;
+    padding-top: 48px;
+    background-color: $black;
+    text-align: center;
+    color: $white;
+
+    .info{
+        margin: 0 auto;
+        width: 720px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .para{
+            font-size: 18px;
+            font-weight: 300;
+            color: $yellow;
+            line-height: 2;
+        }
+
+        .copyright{
+            font-size: 16px;
+            font-weight: 350;
+            color: $white;
+            line-height: 2;
+        }
+    }
+}
 
 @media (max-width: 767px){
     .footer{
