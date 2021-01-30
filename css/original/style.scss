@@ -345,6 +345,7 @@ ul, .h2, .h3, p{
 @media (max-width: 991px){
     .header{
         .navbar{
+            display: block;
             padding: 0;
 
             .btn-toggle{
@@ -358,6 +359,7 @@ ul, .h2, .h3, p{
             .navbar-collapse{
                 width: 100%;
                 height: 100vh;
+                margin-top: -5px;
                 padding: 16px;
                 background-color: rgba($black, 0.8);
             }
@@ -395,11 +397,6 @@ ul, .h2, .h3, p{
             }
         }
     }
-}
-
-.color{
-    background-color: rgba($white, 0.5);
-    border-bottom: 1px solid rgba($black, 0.5);
 }
 
 // header end
@@ -1730,7 +1727,6 @@ ul, .h2, .h3, p{
         height: 720px;
         padding: 96px 24px 112px 24px;
         clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 85%);
-        position: static;
 
         .info{
             margin: 0 auto;
@@ -1745,7 +1741,6 @@ ul, .h2, .h3, p{
         height: 720px;
         padding: 96px 24px 112px 24px;
         clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 85%);
-        position: static;
 
         .info:before{
             width: 336px;
@@ -1768,6 +1763,10 @@ ul, .h2, .h3, p{
 
             .for-567px{
                 display: none;
+            }
+
+            .para{
+                margin-bottom: 16px;
             }
         }
     }
